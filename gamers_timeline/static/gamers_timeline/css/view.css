@@ -1,0 +1,39 @@
+.thread_status{
+    display: flex;
+}
+.anchor{
+    color: blue;
+    font-weight: 500;
+}
+.title{
+    font-size: 32px;
+    font-weight: 600;
+}
+table{
+    width: 100%;
+}
+.col1{
+    width: 5%;
+}
+.col2{
+    width: 70%;
+}
+.col3{
+    width: 10%;
+}
+.col4{
+    width: 15%;
+}
+.thread{
+    margin-bottom: 120px;
+}
+.form-control{
+    width: 50%;
+}
+.form_comment{
+    position: fixed;
+    bottom: 10px;
+}
+table{
+    border-spacing: 0 20px;
+}

@@ -1,0 +1,18 @@
+{% extends 'outer.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static "gamers_timeline/css/top.css" %}">{% endblock css %}
+{% block content %}
+    <h2>Gamersへようこそ！</h2>
+    <p>当サイトはゲームについて、幅広く話せる匿名の掲示板です。<br>
+    同じ趣味を持ったユーザー同士、楽しんで会話を行ってください！</p>
+    <h3>人気のスレッド</h3>
+    {% for i in threads %}
+        <section>
+            <h4><a href="{% url "view" id=i.id %}">{{i.title}}</a></h4>
+            <div class="thread_status">
+                <p class="count">💬{{i.count_comment}}</p>
+                <p class="time">🕒{{i.created}}</p>
+            </div>
+        </section>
+    {% endfor %}
+{% endblock content%}

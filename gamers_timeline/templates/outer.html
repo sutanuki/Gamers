@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "gamers_timeline/css/reset.css" %}">
+    <link rel="stylesheet" href="{% static "gamers_timeline/css/outer.css" %}">
+    {% block css %}{% endblock css %}
+    <title>sample</title>
+</head>
+<body>
+    <header>
+        <h1><a href="{% url "top" %}">Gamers</a></h1>
+        <nav>
+            <ul class="main_nav">
+                <li><a href="{% url "top" %}">Top</a></li>
+                <li><a href="{% url "index" %}">Threads</a></li>
+                <li><a href="{% url "create" %}">Create</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    {% block content %}
+    {% endblock content %}
+    </main>
+</body>
+</html>

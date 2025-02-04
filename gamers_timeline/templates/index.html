@@ -1,0 +1,15 @@
+{% extends 'outer.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static "gamers_timeline/css/index.css" %}">{% endblock css %}
+{% block content %}
+    <h2>スレッド一覧</h2>
+    {% for i in threads %}
+        <section>
+            <h4><a href="{% url "view" id=i.id %}">{{i.title}}</a></h4>
+            <div class="thread_status">
+                <p class="count">💬{{i.count_comment}}</p>
+                <p class="time">🕒{{i.created}}</p>
+            </div>
+        </section>
+    {% endfor %}
+{% endblock content%}

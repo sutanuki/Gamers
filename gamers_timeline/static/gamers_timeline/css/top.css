@@ -1,0 +1,17 @@
+.thread_status{
+    display: flex;
+    gap: 20px;
+}
+h3{
+    margin-top: 60px;
+}
+section{
+    padding: 30px 0 20px;
+    border-bottom: 1px solid;
+}
+section:last-child{
+    border: none;
+}
+.count{
+    width: 80px;
+}

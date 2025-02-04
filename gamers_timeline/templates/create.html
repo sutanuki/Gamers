@@ -1,0 +1,15 @@
+{% extends 'outer.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static "gamers_timeline/css/create.css" %}">{% endblock css %}
+{% block content %}
+    <table>
+        <form action="{% url 'create' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_table }}
+            <tr>
+            <td></td>
+            <td><input type="submit" value="送信"></td>
+            </tr>
+        </form>
+    </table>
+{% endblock content%}

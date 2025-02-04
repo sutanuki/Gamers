@@ -1,0 +1,47 @@
+{% extends 'outer.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static "gamers_timeline/css/view.css" %}">{% endblock css %}
+{% block content %}
+    <table class="thread">
+        <thead>
+            <tr>
+                <th class="col1" scope="col"></th>
+                <th class="col2" scope="col"></th>
+                <th class="col3" scope="col"></th>
+                <th class="col4" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2" class="title">{{thread.title}}</td>
+                <td>💬{{thread.count_comment}}</td>
+                <td>{{thread.created}}</td>
+            </tr>
+            <p>{{comment_anchors}}</p>
+            {% for comment, anchor in comment_anchors %}
+                <tr>
+                    <td id="{{forloop.counter}}">{{forloop.counter}}</td>
+                    <td colspan="2">
+                        {% if anchor %}
+                            <a href="#{{anchor.reply_to}}" class="anchor">>>{{ anchor.reply_to }}</a>
+                        {% endif %}
+                        {{comment.content}}
+                    </td>
+                    <td>{{comment.commented}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <table class="form_comment">
+        <form action="{% url 'view' id=thread.id %}" method="post">
+            <tr>
+                {% csrf_token %}
+                {{ form.as_table }}
+                <td></td>
+                <td><input type="submit" value="送信"></td>
+            </tr>
+        </form>
+    </table>
+
+{% endblock content%}

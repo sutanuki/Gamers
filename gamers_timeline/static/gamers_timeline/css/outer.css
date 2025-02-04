@@ -1,0 +1,26 @@
+header{
+    position: fixed;
+    display: flex;
+    left: 3%;
+    top: 10px;
+    width: 94%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+a{
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.9);
+}
+main{
+    margin: 110px 60px 20px;
+}
+h1{
+    font-size: 32px;
+    font-weight: bold;
+}
+.main_nav{
+    display: flex;
+    gap: 15px;
+}
+a{
+    text-decoration: none;
+}
