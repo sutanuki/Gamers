@@ -3,13 +3,13 @@ from .models import Thread,Comment,Anchor
 
 
 @admin.register(Thread)
-class UserAdmin(admin.ModelAdmin):
+class ThreadAdmin(admin.ModelAdmin):
     pass
 
 @admin.register(Comment)
-class EntryAdmin(admin.ModelAdmin):
+class CommentAdmin(admin.ModelAdmin):
     pass
 
 @admin.register(Anchor)
-class UserAdmin(admin.ModelAdmin):
+class AnchorAdmin(admin.ModelAdmin):
     pass

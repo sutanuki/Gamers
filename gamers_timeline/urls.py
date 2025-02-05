@@ -1,5 +1,3 @@
-from django.views.generic import CreateView
-from django.urls import reverse_lazy
 from django.urls import path
 from gamers_timeline import views
 urlpatterns = [
