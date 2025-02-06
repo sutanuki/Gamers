@@ -17,7 +17,6 @@
                 <td>💬{{thread.count_comment}}</td>
                 <td>{{thread.created}}</td>
             </tr>
-            <p>{{comment_anchors}}</p>
             {% for comment, anchor in comment_anchors %}
                 <tr>
                     <td id="{{forloop.counter}}">{{forloop.counter}}</td>
